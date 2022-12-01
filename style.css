@@ -112,3 +112,16 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+
+#title {
+  font-size: 2rem;
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 7rem;
+  font-variant: small-caps;
+  background-color: orange;
+  width: 60%;
+  padding: 0 1.5rem;
+  border-radius: 1rem;
+}

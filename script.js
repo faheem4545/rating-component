@@ -1,4 +1,10 @@
 const ratingBtn = document.querySelectorAll(".btn");
+const showRate = document.getElementById("res");
+window.addEventListener("load", () => {
+  const value = localStorage.getItem("value");
+  console.log(value);
+  showRate.innerHTML = value;
+});
 
 // ratingBtn.forEach((btn) => {
 //   btn.addEventListener("click", (e) => {
@@ -16,7 +22,10 @@ const ratingBtn = document.querySelectorAll(".btn");
 
 ratingBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    const currentValue = e.currentTarget;
+    const currentValue = e.currentTarget.innerText;
+
+    localStorage.setItem("value", currentValue);
+
     ratingBtn.forEach((btn) => {
       btn.classList.remove("active");
     });
